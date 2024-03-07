@@ -1,33 +1,21 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path');
-function createWindow () {
-    // Create the browser window
-    let win = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            nodeIntegration: true,
-            icon: path.join(__dirname, 'path_to_your_icon.ico')
-        }
-    })
+// renderer.js
+const { Router } = require('electron-router');
 
-    // Load the index.html file
-    win.loadFile('index.html')
+const router = Router('Renderer');
+
+// Function to navigate to a specific page
+function navigateToPage(pageName) {
+    router.send('navigate', pageName);
 }
 
-// This method will be called when Electron has finished initialization
-app.whenReady().then(createWindow)
+document.getElementById('button1').addEventListener('click', function() {
+    navigateToPage('page1.html');
+});
 
-// Quit when all windows are closed, except on macOS
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
-})
+document.getElementById('button2').addEventListener('click', function() {
+    navigateToPage('page2.html');
+});
 
-app.on('activate', () => {
-    // On macOS, re-create a window if there are no windows open and the dock icon is clicked
-    if (BrowserWindow.getAllWindows().length === 0) {
-        createWindow()
-    }
-})
+document.getElementById('button3').addEventListener('click', function() {
+    navigateToPage('page3.html');
+});
