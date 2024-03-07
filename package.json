@@ -2,7 +2,7 @@
   "name": "electron",
   "version": "1.0.0",
   "description": "An UI that aims to used in AI trigger ",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "test",
     "start": "electron ."
@@ -25,5 +25,9 @@
   "homepage": "https://github.com/hasan-kayan/ElectronDesktop#readme",
   "devDependencies": {
     "electron": "^29.1.0"
+  },
+  "dependencies": {
+    "konva": "^9.3.6",
+    "tailwindcss": "^3.4.1"
   }
 }
