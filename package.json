@@ -1,0 +1,29 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "An UI that aims to used in AI trigger ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasan-kayan/ElectronDesktop.git"
+  },
+  "keywords": [
+    "AI",
+    "Desktop",
+    "System",
+    "UI"
+  ],
+  "author": "Hasan Kayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasan-kayan/ElectronDesktop/issues"
+  },
+  "homepage": "https://github.com/hasan-kayan/ElectronDesktop#readme",
+  "devDependencies": {
+    "electron": "^29.1.0"
+  }
+}
