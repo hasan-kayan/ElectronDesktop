@@ -24,7 +24,20 @@
   },
   "homepage": "https://github.com/hasan-kayan/ElectronDesktop#readme",
   "devDependencies": {
-    "electron": "^29.1.0"
+    "electron": "^29.1.1"
+  },
+  "build": {
+    "appId": "com.hasan-kayan.electron",
+    "productName": "Your App Name",
+    "mac": {
+      "icon": "./Public/ayak.jpg"
+    },
+    "win": {
+      "icon": "./Public/ayak.jpg"
+    },
+    "linux": {
+      "icon": "./Public/ayak.jpg"
+    }
   },
   "dependencies": {
     "electron-router": "^0.5.1",
