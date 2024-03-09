@@ -9,9 +9,11 @@ function handleButtonClick(event) {
             break;
         case 'sketcherBtn':
             // Code to navigate to the sketcher page
+            window.location.href = '../sketcher/sketcher.html';
             break;
         case 'otherBtn':
-            // Code for other functionality
+            // Code for other functionality or navigating to the home page
+            window.location.href = 'index.html';
             break;
         default:
             break;
