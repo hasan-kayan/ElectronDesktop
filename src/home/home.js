@@ -6,6 +6,7 @@ function handleButtonClick(event) {
     switch (buttonId) {
         case 'analyzerBtn':
             // Code to navigate to the analyzer page
+            window.location.href = '../sketcher/sketcher.html';
             break;
         case 'sketcherBtn':
             // Code to navigate to the sketcher page
@@ -13,7 +14,7 @@ function handleButtonClick(event) {
             break;
         case 'otherBtn':
             // Code for other functionality or navigating to the home page
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
             break;
         default:
             break;

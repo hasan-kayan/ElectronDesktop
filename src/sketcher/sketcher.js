@@ -9,18 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
     stage.add(layer);
 
     let isDrawing = false;
-    let lastLine;
+    let line;
 
     stage.on('mousedown touchstart', (e) => {
         isDrawing = true;
         const pos = stage.getPointerPosition();
-        lastLine = new Konva.Line({
+        line = new Konva.Line({
             stroke: 'black',
             strokeWidth: 5,
             globalCompositeOperation: 'source-over',
-            points: [pos.x, pos.y]
+            points: [pos.x, pos.y, pos.x, pos.y] // start and end point are the same initially
         });
-        layer.add(lastLine);
+        layer.add(line);
     });
 
     stage.on('mouseup touchend', () => {
@@ -32,8 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         const pos = stage.getPointerPosition();
-        let newPoints = lastLine.points().concat([pos.x, pos.y]);
-        lastLine.points(newPoints);
+        let points = line.points();
+        points[2] = pos.x; // Update the end point
+        points[3] = pos.y;
+        line.points(points);
         layer.batchDraw();
     });
 });

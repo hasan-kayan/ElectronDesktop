@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="sketcher.css">
 </head>
 <body>
-    <h1>Hello Doc</h1>
+    <!-- Container for the Konva stage -->
     <div id="container"></div>
+    
+    <!-- Button to trigger file upload -->
+    <button id="uploadButton">Upload Image</button>
+
+    <!-- Hidden input element for file upload -->
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
     <script src="https://cdn.jsdelivr.net/npm/konva@7.2.5/konva.min.js"></script>
     <script src="sketcher.js"></script>
 </body>
