@@ -10,6 +10,7 @@
     width: 200px; /* Adjust the size as needed */
     height: auto;
     margin-bottom: 20px;
+    border-radius: 100px; /* Rounded corners */
 }
 
 .buttons {
@@ -22,4 +23,13 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #007bff; /* Default button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Hover background color */
 }
